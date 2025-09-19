@@ -10,7 +10,7 @@ print("==Grade Classification==")
 score = 87
 if score >= 90:
     print("A grade!")
-elif score >= 80:
+elif score >= 80 and score <= 90:
     print("B grade!")
 else:
     print("Below a B.")
@@ -20,18 +20,18 @@ else:
 # SECTION 2: AGE CATEGORY CLASSIFIER
 # ========================================
 
-age_input = input("Enter your age:")
+age_input = input("Enter your age: ")
 if age_input:
     age = int(age_input)
     
     if age >= 0 and age <= 12:
         print("You are a child.")
     elif age >= 13 and age <=19:
-        print("You are a teenager")
+        print("You are a teenager.")
     elif age >= 20 and age <= 64:
-        print("You are an adult")
+        print("You are an adult.")
     elif age >= 65:
-        print("You are a senior")
+        print("You are a senior.")
     else:
         print("Please enter a valid age")
 else:
@@ -41,6 +41,20 @@ else:
 # SECTION 3: STUDENT STATUS CHECKER
 # ========================================
 
+age = 17
+gpa = 3.8
+has_license = True
+
+can_drive = age >= 16 and has_license
+honor_roll = gpa >= 3.5
+eligible = can_drive and honor_roll and age >= 17
+
+print(f"Can Drive: {can_drive}")
+print(f"Honor Roll: {honor_roll}")
+print(f"Eligible: {eligible}")
+
+if eligible:
+    print("Scholarship Candidate")
 
 # ========================================
 # SECTION 4: GRADE VALIDATOR CHALLENGE
@@ -50,5 +64,3 @@ else:
 # ========================================
 # SECTION 5: WEATHER DECISION SYSTEM
 # ========================================
-
-# to be removed later
