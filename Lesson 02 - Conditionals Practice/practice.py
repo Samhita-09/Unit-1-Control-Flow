@@ -1,4 +1,4 @@
-age = int(input("Enter your age: "))
+age = input("Enter your age: ")
 rating = input("Enter movie rating: ")
 
 # can_watch_G = age and rating == "G"
@@ -9,21 +9,15 @@ rating = input("Enter movie rating: ")
 print(f"Age: {age}, Rating: {rating}")
 
 if age:
-    if age and rating == "G":
+    if int(age) and rating == "G":
         print("APPROVED: You can watch this movie!")
+    elif int(age) < 6 and rating == "PG":
+        print("DENIED: Must be 6+ to watch PG-rated movies.")
+    elif int(age) < 13 and rating == "PG13":
+        print("DENIED: Must be 13+ to watch PG13-rated movies.")
+    elif int(age) < 17 and rating == "R":
+        print("DENIED: Must be 17+ to watch R-rated movies.")
     else:
-        print("DENIED: Not approved for your age.")
-    if age >= 6 and rating == "PG":
         print("APPROVED: You can watch this movie!")
-    else:
-        print("DENIED: Not approved for your age.")
-    if age >= 13 and rating == "PG13":
-        print("APPROVED: You can watch this movie!")
-    else:
-        print("DENIED: Not approved for your age.")
-    if age >= 17 and rating == "R":
-        print("APPROVED: You can watch this movie!")
-    else:
-        print("DENIED: Not approved for your age.")
 else:
     print("Please enter a valid age and movie rating!")
