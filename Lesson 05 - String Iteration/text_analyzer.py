@@ -1,4 +1,4 @@
-text = input("Enter text:")
+text = input("Enter text: ")
 
 # initialize counters
 total_chars = len(text)
@@ -11,7 +11,7 @@ lowercase_count = 0
 first_letter = None
 last_letter = None
 
-print(f"Analyzeing: '{text}")
+print(f"Analyzing: '{text}")
 print("=" * 40)
 
 # Process each character
